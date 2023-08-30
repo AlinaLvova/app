@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    padding: 0 375px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header__menu-item {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "MuseoSansCyrl-300";
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 22px;
+    padding: 3px 0;
+}
+
+.header__menu-item:hover{
+    border-bottom: 1px solid #b1b1b1 !important;
+    color: #b1b1b1;
+}
+
+.header__menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.header__logo {
+    background-image: url(../../assets/icons/logo.png);
+    width: 274px;
+    height: 34px;
+}
+
+.header__logo-container {
+    background-image: url(../../assets/icons/logo-corners.png);
+    width: 316px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
