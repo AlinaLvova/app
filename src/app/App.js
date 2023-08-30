@@ -6,7 +6,7 @@ function App() {
   return (
     // <Routes>
     <div className="page">
-      <div className="page_sun">
+      <div className="page__sun">
         <Header />
       </div>
     </div>

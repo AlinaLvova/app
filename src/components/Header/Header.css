@@ -1,6 +1,5 @@
 .header {
     display: flex;
-    padding: 0 375px;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
@@ -17,6 +16,8 @@
     letter-spacing: normal;
     line-height: 22px;
     padding: 3px 0;
+    transition: color 1s, border-bottom 1s;
+    box-sizing: border-box;
 }
 
 .header__menu-item:hover{
@@ -31,16 +32,48 @@
 }
 
 .header__logo {
-    background-image: url(../../assets/icons/logo.png);
-    width: 274px;
-    height: 34px;
-}
-
-.header__logo-container {
     background-image: url(../../assets/icons/logo-corners.png);
+    background-size: 316px 100px;
     width: 316px;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.header__logo::after{
+    background-image: url(../../assets/icons/logo.png);
+    content: '';
+    width: 274px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.header__menu-button {
+    margin-right: 8px;
+    width: 28px;
+    height: 23px;
+    background-image: url(../../assets/icons/menu.svg);
+}
+
+@media screen and (max-width: 1630px) {
+    
+}
+
+@media screen and (max-width: 1439px) {
+    
+}
+
+@media screen and (max-width: 1131px) {
+    .header__logo {
+        background-size: 200px calc(100 * 200px / 316);
+        width: 200px;
+        height: calc(100 * 200px / 316);
+    }
+    .header__logo::after{
+        width: 177px;
+        height: 20px;
+    }
 }
