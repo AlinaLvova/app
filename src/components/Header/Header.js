@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { MENU_ICON_SCREEN_WIDTH } from "../../utils/constants";
 
-function Header(onClickMenuButton) {
+function Header({onMenuButtonClick}) {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -16,13 +16,12 @@ function Header(onClickMenuButton) {
   }
 
   const handleOpenMenu = () => {
-    onClickMenuButton();
+    onMenuButtonClick();
   };
 
   return (
     <div className="header">
-      <div className="header__logo" />
-
+      <NavLink to="/" className="header__logo link" />
       {width < MENU_ICON_SCREEN_WIDTH ? (
         <button
           type="button"
@@ -31,19 +30,19 @@ function Header(onClickMenuButton) {
         ></button>
       ) : (
         <nav className="header__menu">
-          <NavLink to="/" className="header__menu-item">
+          <NavLink to="/" className="header__menu-item link">
             Главная
           </NavLink>
-          <NavLink to="/" className="header__menu-item">
+          <NavLink to="/" className="header__menu-item link">
             Технология
           </NavLink>
-          <NavLink to="/" className="header__menu-item">
+          <NavLink to="/" className="header__menu-item link">
             График полетов
           </NavLink>
-          <NavLink to="/" className="header__menu-item">
+          <NavLink to="/" className="header__menu-item link">
             О компании
           </NavLink>
-          <NavLink to="/" className="header__menu-item">
+          <NavLink to="/" className="header__menu-item link">
             Контакты
           </NavLink>
         </nav>

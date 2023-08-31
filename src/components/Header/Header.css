@@ -9,7 +9,7 @@
 .header__menu-item {
     text-decoration: none;
     color: #ffffff;
-    font-family: "MuseoSansCyrl-300";
+    font-family: "MuseoSansCyrl-300", "Suisse-Intl", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 300;
     font-style: normal;
